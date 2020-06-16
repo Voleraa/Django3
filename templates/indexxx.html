@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog index</title>
+</head>
+<body>
+    {% if articles %}
+        <ul>
+        {% for article in articles %}
+            <li><a href="/voler/{{ article.id }}/">{{ article.title }}</a></li>
+            <h3>{{ article.body }}</h3>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+</body>
+</html>
